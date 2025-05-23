@@ -1,0 +1,29 @@
+{
+  "name": "bbc-ucc-api-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "run-all-parallel": "node run-parallel.js",
+    "scenario1": "npx cucumber-js --require step-definitions --format json:reports/output.json --tags @scenario1 && node generate-report.js",
+    "scenario2": "npx cucumber-js --require step-definitions --format json:reports/output.json --tags @scenario2 && node generate-report.js",
+    "scenario3": "npx cucumber-js --require step-definitions --format json:reports/output.json --tags @scenario3 && node generate-report.js",
+    "scenario4": "npx cucumber-js --require step-definitions --format json:reports/output.json --tags @scenario4 && node generate-report.js",
+    "scenario5": "npx cucumber-js --require step-definitions --format json:reports/output.json --tags @scenario5 && node generate-report.js",
+    "test": "npx cucumber-js --require step-definitions --format json:reports/output.json",
+    "report": "node generate-report.js",
+    "test:report": "npm run test && npm run report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^4.5.0",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "axios": "^1.9.0",
+    "cucumber-html-reporter": "^6.0.0"
+  }
+}
